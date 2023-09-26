@@ -1,5 +1,11 @@
 pipeline {
     agent any
+    triggers {
+        GenericTrigger(
+            genericVariables: [
+            [key: 'PR', value: '$']
+         ]
+    }
     stages {
         stage('Build') {
             steps {
