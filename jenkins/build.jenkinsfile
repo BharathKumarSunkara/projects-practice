@@ -1,4 +1,4 @@
-#this is sample pipeline for build tesing 
+//this is sample pipeline for build tesing 
 pipeline {
     agent any
     stages {
