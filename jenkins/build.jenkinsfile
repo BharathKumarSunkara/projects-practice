@@ -1,44 +1,20 @@
 pipeline {
-    agent any  // You can specify a specific agent or node here
-
+    agent any
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout your source code from a version control system (e.g., Git)
-                checkout scm
-            }
-        }
-        
         stage('Build') {
             steps {
-                // Compile and build your application
-                sh 'mvn clean package'  // Example for a Maven project
+                //
             }
         }
-        
         stage('Test') {
             steps {
-                // Run tests on your code
-                sh 'mvn test'  // Example for a Maven project
+                //
             }
         }
-        
         stage('Deploy') {
             steps {
-                // Deploy your application to a target environment (e.g., staging or production)
-                sh 'deploy-script.sh'  // Replace with your deployment script or commands
+                //
             }
-        }
-    }
-    
-    post {
-        success {
-            // Actions to perform when the pipeline succeeds
-            echo 'Pipeline succeeded!'
-        }
-        failure {
-            // Actions to perform when the pipeline fails
-            echo 'Pipeline failed!'
         }
     }
 }
